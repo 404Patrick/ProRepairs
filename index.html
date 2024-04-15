@@ -55,16 +55,18 @@
     <p class="about-us-text2">Ve společnosti ProRepair jsme hrdí na rychlé provedení opravy, přijatelné ceny a výjimečný zákaznický servis. Důvěřujte nám, že váš počítač zprovozníme během chvilky.</p>
 </div>
 
-<div class="obrázkos">
-    <img src="assets/images/image1.jfif" alt="">
-    <img src="assets/images/image2.jfif" alt="">
-    <img src="assets/images/image3.jfif" alt="">
+<div class="full-img" id="fullImgBox">
+    <img src="assets/images/image1.jfif" id="fullImg" alt="">
+    <span onclick="closeFullImg()">X</span>
 </div>
 
-<div class="obrázkos2">
-    <img src="assets/images/image4.jfif" alt="">
-    <img src="assets/images/image5.jfif" alt="">
-    <img src="assets/images/image6.jfif" alt="">
+<div class="img-gallery">
+    <img src="assets/images/image1.jfif" onclick="openFullImg(this.src)" alt="">
+    <img src="assets/images/image2.jfif" onclick="openFullImg(this.src)" alt="">
+    <img src="assets/images/image3.jfif" onclick="openFullImg(this.src)" alt="">
+    <img src="assets/images/image4.jfif" onclick="openFullImg(this.src)" alt="">
+    <img src="assets/images/image5.jfif" onclick="openFullImg(this.src)" alt="">
+    <img src="assets/images/image6.jfif" onclick="openFullImg(this.src)" alt="">
 </div>
 
 <div class="about-us2-container">
@@ -75,5 +77,18 @@
 <footer>
     <p>© 2024 ProRepair</p>
 </footer>
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic) {
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg() {
+        fullImgBox.style.display = "none";
+    }
+</script>
 </body>
 </html>
